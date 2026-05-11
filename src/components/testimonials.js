@@ -2,7 +2,7 @@ const Stars = (n) => Array.from({ length: n }, () =>
   `<svg width="16" height="16" viewBox="0 0 24 24" fill="#d4a017" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`
 ).join('');
 
-export function Testimonials({ testimonials, trustBadges }) {
+export function Testimonials({ testimonials, trustBadges, copy }) {
   const cards = testimonials.map((t, i) => `
     <div class="testi-card reveal d${i + 1}">
       <div style="display:flex;gap:2px;margin-bottom:20px;">${Stars(t.stars)}</div>
@@ -31,12 +31,12 @@ export function Testimonials({ testimonials, trustBadges }) {
     <section id="testimonials" class="section-pad" style="background:var(--color-stone-100);">
       <div class="site-container">
         <div style="text-align:center;max-width:580px;margin:0 auto 64px;" class="reveal">
-          <span class="section-eyebrow" style="justify-content:center;">Client Stories</span>
+          <span class="section-eyebrow" style="justify-content:center;">${copy.testimonials.eyebrow}</span>
           <h2 style="font-family:var(--font-display);font-size:clamp(30px,4vw,46px);font-weight:700;color:var(--color-charcoal-800);margin:0 0 16px;letter-spacing:-0.02em;line-height:1.1;">
-            Trusted by Colorado Homeowners
+            ${copy.testimonials.heading}
           </h2>
           <p style="font-size:17px;line-height:1.7;color:var(--color-stone-600);margin:0;">
-            Our work speaks through the words of the people who live in it every day.
+            ${copy.testimonials.subtext}
           </p>
         </div>
 

@@ -8,7 +8,7 @@ const SOCIAL_ICONS = [
 const COMPANY_LINKS = ['About Us', 'Our Process', 'Portfolio', 'Careers', 'Press'];
 const SUPPORT_LINKS = ['Contact Us', 'FAQ', 'Service Areas', 'Free Consultation', 'Privacy Policy'];
 
-export function Footer({ nameLine1, nameLine2, name, email, phone, phoneHref, serviceAreas, services, founded }) {
+export function Footer({ nameLine1, nameLine2, name, email, phone, phoneHref, serviceAreas, services, founded, copy }) {
   const year = new Date().getFullYear();
 
   const serviceLinks = services.map(s => `<li><a href="#services" class="footer-link">${s.title}</a></li>`).join('');
@@ -49,7 +49,7 @@ export function Footer({ nameLine1, nameLine2, name, email, phone, phoneHref, se
               </div>
             </div>
             <p style="font-size:14px;line-height:1.7;color:var(--color-stone-500);max-width:260px;margin-bottom:24px;">
-              Premium landscape design and installation serving ${serviceAreas.join(', ')} since ${founded}.
+              ${copy.footer.tagline}
             </p>
             <div style="display:flex;gap:10px;">${socials}</div>
           </div>

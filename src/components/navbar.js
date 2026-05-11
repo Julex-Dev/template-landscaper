@@ -1,4 +1,4 @@
-export function Navbar({ nameLine1, nameLine2 }) {
+export function Navbar({ nameLine1, nameLine2, copy }) {
   return `
     <nav id="navbar">
       <div class="site-container">
@@ -22,7 +22,7 @@ export function Navbar({ nameLine1, nameLine2 }) {
             <a href="#services" class="nav-link">Services</a>
             <a href="#about" class="nav-link">About</a>
             <a href="#testimonials" class="nav-link">Testimonials</a>
-            <a href="#quote" class="btn btn-primary" style="padding:10px 22px;font-size:12px;">Free Quote</a>
+            <a href="#quote" class="btn btn-primary" style="padding:10px 22px;font-size:12px;">${copy.nav.cta}</a>
           </div>
 
           <!-- Hamburger (mobile) -->

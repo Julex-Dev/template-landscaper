@@ -8,7 +8,7 @@ const ICONS = {
   lighting: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6aab84" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`,
 };
 
-export function Services({ services }) {
+export function Services({ services, copy }) {
   const cards = services.map((s, i) => `
     <div class="service-card reveal d${i + 1}">
       <div class="service-icon">${ICONS[s.key] ?? ICONS.design}</div>
@@ -21,12 +21,12 @@ export function Services({ services }) {
     <section id="services" class="section-pad" style="background:var(--color-stone-50);">
       <div class="site-container">
         <div style="max-width:560px;margin-bottom:64px;" class="reveal">
-          <span class="section-eyebrow">What We Do</span>
+          <span class="section-eyebrow">${copy.services.eyebrow}</span>
           <h2 style="font-family:var(--font-display);font-size:clamp(32px,4vw,48px);font-weight:700;color:var(--color-charcoal-800);margin:0 0 16px;letter-spacing:-0.02em;line-height:1.1;">
-            Comprehensive Services,<br>Uncompromising Quality
+            ${copy.services.heading}
           </h2>
           <p style="font-size:17px;line-height:1.7;color:var(--color-stone-600);margin:0;">
-            Every project we take on is treated as a long-term relationship. From initial concept to ongoing care, we're with you at every stage.
+            ${copy.services.subtext}
           </p>
           <div class="section-divider" style="margin-top:24px;"></div>
         </div>

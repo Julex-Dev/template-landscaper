@@ -1,4 +1,4 @@
-export function About({ yearsExperience, founded, founder, story, credentials, stats }) {
+export function About({ yearsExperience, founded, founder, story, credentials, stats, copy }) {
   const statsHtml = stats.map(s => `
     <div style="text-align:center;padding:24px 16px;">
       <div class="stat-number">
@@ -58,15 +58,15 @@ export function About({ yearsExperience, founded, founder, story, credentials, s
 
           <!-- Right: copy -->
           <div class="reveal-right">
-            <span class="section-eyebrow">Our Story</span>
+            <span class="section-eyebrow">${copy.about.eyebrow}</span>
             <h2 style="font-family:var(--font-display);font-size:clamp(30px,3.5vw,44px);font-weight:700;color:var(--color-charcoal-800);margin:0 0 24px;letter-spacing:-0.02em;line-height:1.12;">
-              Rooted in the Rocky Mountains Since ${founded}
+              ${copy.about.heading} ${founded}
             </h2>
             ${storyHtml}
             <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:40px;">
               ${credentialsHtml}
             </div>
-            <a href="#quote" class="btn btn-dark">Work With Us</a>
+            <a href="#quote" class="btn btn-dark">${copy.about.cta}</a>
           </div>
 
         </div>

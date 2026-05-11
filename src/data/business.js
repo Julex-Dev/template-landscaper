@@ -17,7 +17,7 @@ export const business = {
 
   // ── Contact ────────────────────────────────────────────────
   phone:     '(02) 4782 6391',
-  phoneHref: 'tel:+17205550184',
+  phoneHref: 'tel:+61247826391',
   email:     'hello@blueridgelandscapes.com',
 
   // ── Location ───────────────────────────────────────────────
@@ -125,6 +125,68 @@ export const business = {
     { value: '#1',     label: 'Houzz Award',     sub: '3 Consecutive Years' },
     { value: 'Top 5%', label: 'Angi Certified',  sub: 'Elite Pro Status' },
   ],
+
+  // ── SEO ────────────────────────────────────────────────────
+  // Used by main.js to set <title> and <meta name="description"> at runtime.
+  seo: {
+    title:       'Blue Ridge Landscapes — Sculpting the Mountains, One Garden at a Time',
+    description: 'Premium landscape design and installation for Blue Mountains homeowners. Blue Ridge Landscapes transforms outdoor spaces into living works of art built to endure every season.',
+  },
+
+  // ── Section copy ───────────────────────────────────────────
+  // Every piece of visible text that is business-specific lives here.
+  // Components read from this object — nothing is hardcoded in templates.
+  copy: {
+
+    nav: {
+      cta: 'Free Quote',
+    },
+
+    hero: {
+      headline:     'Where Craft<br>Meets {{accent}}Landscape.{{/accent}}',
+      ctaPrimary:   'Request a Free Quote',
+      ctaSecondary: 'Explore Services',
+    },
+
+    about: {
+      eyebrow: 'Our Story',
+      heading: 'Rooted in the Blue Mountains Since',  // founded year appended automatically
+      cta:     'Work With Us',
+    },
+
+    services: {
+      eyebrow:  'What We Do',
+      heading:  'Comprehensive Services,<br>Uncompromising Quality',
+      subtext:  "Every project we take on is treated as a long-term relationship. From initial concept to ongoing care, we're with you at every stage.",
+    },
+
+    testimonials: {
+      eyebrow: 'Client Stories',
+      heading: 'Trusted by Blue Mountains Homeowners',
+      subtext: 'Our work speaks through the words of the people who live in it every day.',
+    },
+
+    quote: {
+      eyebrow:            'Get Started',
+      heading:            "Let's Build Something Beautiful Together",
+      subtext:            "Share your vision with us. We'll schedule a complimentary on-site consultation and deliver a detailed proposal — no obligation, no pressure.",
+      contactLabel:       'Contact Directly',
+      addressPlaceholder: '25 Lurline St, Katoomba NSW 2780',
+      submitLabel:        'Submit My Request',
+      disclaimer:         'We respond within 1 business day. Your information is never shared.',
+      bullets: [
+        ['Free On-Site Consultation', 'We visit your property and assess your space at no cost.'],
+        ['Detailed Written Proposal',  'You receive a full scope, timeline, and transparent pricing.'],
+        ['No Hidden Fees — Ever',      'Our contracts are fixed-price. What we quote is what you pay.'],
+      ],
+    },
+
+    footer: {
+      tagline:   'Premium landscape design and installation for the Blue Mountains.',
+      mobileCta: 'Get Your Free Quote',
+    },
+
+  },
 
   // ── Colour palette ─────────────────────────────────────────
   // These are injected as CSS custom properties at runtime (see main.js → applyTheme).

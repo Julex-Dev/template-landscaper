@@ -21,7 +21,11 @@ function applyTheme(colors) {
 
 applyTheme(business.colors);
 
-// ── 2. Responsive grid overrides ────────────────────────────
+// ── 2. Apply SEO meta from business config ───────────────────
+document.title = business.seo.title;
+document.querySelector('meta[name="description"]').setAttribute('content', business.seo.description);
+
+// ── 3. Responsive grid overrides ────────────────────────────
 const responsiveStyle = document.createElement('style');
 responsiveStyle.textContent = `
   @media (min-width: 768px) { .md-hidden { display: none !important; } }
@@ -35,13 +39,13 @@ responsiveStyle.textContent = `
 `;
 document.head.appendChild(responsiveStyle);
 
-// ── 3. Render ────────────────────────────────────────────────
+// ── 4. Render ────────────────────────────────────────────────
 document.getElementById('app').innerHTML = `
   ${Navbar(business)}
 
   <div id="mobile-cta">
     <a href="#quote" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;">
-      Get Your Free Quote
+      ${business.copy.footer.mobileCta}
     </a>
   </div>
 
@@ -56,12 +60,12 @@ document.getElementById('app').innerHTML = `
   ${Footer(business)}
 `;
 
-// ── 4. Apply responsive class names after render ─────────────
+// ── 5. Apply responsive class names after render ─────────────
 document.querySelector('#about > .site-container > div')?.classList.add('about-grid');
 document.querySelector('#quote > .site-container > div')?.classList.add('quote-grid');
 document.querySelector('footer > .site-container > div:first-child')?.classList.add('footer-grid');
 
-// ── 5. Init all interactive features ────────────────────────
+// ── 6. Init all interactive features ────────────────────────
 initNavbar();
 initHero();
 initReveal();

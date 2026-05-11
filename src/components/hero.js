@@ -22,7 +22,7 @@ const mountainSvg = `
   </svg>
 `;
 
-export function Hero({ founded, city, state, description }) {
+export function Hero({ founded, city, state, description, copy }) {
   return `
     <section id="hero">
       <div class="hero-bg" id="hero-parallax"></div>
@@ -34,7 +34,7 @@ export function Hero({ founded, city, state, description }) {
           <p class="section-eyebrow" style="color:rgba(110,171,132,0.85);">Est. ${founded} &nbsp;·&nbsp; ${city}, ${state}</p>
 
           <h1 style="font-family:var(--font-display);font-size:clamp(44px,7vw,88px);font-weight:700;color:#faf8f5;line-height:1.04;letter-spacing:-0.02em;margin:0 0 24px;">
-            Where Craft<br>Meets <em style="color:var(--color-forest-400);font-style:italic;">Landscape.</em>
+            ${copy.hero.headline.replace(/\{\{accent\}\}(.*?)\{\{\/accent\}\}/g, '<em style="color:var(--color-forest-400);font-style:italic;">$1</em>')}
           </h1>
 
           <p style="font-size:clamp(16px,2vw,19px);color:rgba(212,201,187,0.85);font-weight:300;line-height:1.7;max-width:480px;margin-bottom:40px;">
@@ -42,8 +42,8 @@ export function Hero({ founded, city, state, description }) {
           </p>
 
           <div style="display:flex;flex-wrap:wrap;gap:14px;">
-            <a href="#quote" class="btn btn-primary">Request a Free Quote</a>
-            <a href="#services" class="btn btn-outline">Explore Services</a>
+            <a href="#quote" class="btn btn-primary">${copy.hero.ctaPrimary}</a>
+            <a href="#services" class="btn btn-outline">${copy.hero.ctaSecondary}</a>
           </div>
         </div>
       </div>
