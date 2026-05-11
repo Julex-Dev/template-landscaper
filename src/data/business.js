@@ -6,27 +6,27 @@
 export const business = {
 
   // ── Identity ───────────────────────────────────────────────
-  name:      'Summit Ridge Landscaping',
-  nameLine1: 'Summit Ridge',
-  nameLine2: 'Landscaping',
-  tagline:   'Precision. Beauty. Craft.',
+  name:      'Blue Ridge Landscapes',
+  nameLine1: 'Blue Ridge',
+  nameLine2: 'Landscapes',
+  tagline:   'Sculpting the Mountains, One Garden at a Time',
   description:
-    'Premium landscape design and installation for discerning Colorado homeowners. ' +
+    'Premium landscape design and installation for discerning Blue Mountains homeowners. ' +
     'We transform outdoor spaces into living works of art — built to endure every season.',
-  founded: 2009,
+  founded: 2026,
 
   // ── Contact ────────────────────────────────────────────────
-  phone:     '(720) 555-0184',
+  phone:     '(02) 4782 6391',
   phoneHref: 'tel:+17205550184',
-  email:     'hello@summitridgelandscaping.com',
+  email:     'hello@blueridgelandscapes.com',
 
   // ── Location ───────────────────────────────────────────────
-  city:         'Denver',
-  state:        'Colorado',
-  serviceAreas: ['Denver', 'Boulder', 'Fort Collins', 'Estes Park'],
+  city:         'Katoomba',
+  state:        'NSW',
+  serviceAreas: ['Katoomba', 'Lithgow', 'Springwood & Surrounds', 'Blue Mountains'],
 
   // ── About ──────────────────────────────────────────────────
-  yearsExperience: 15,
+  yearsExperience: 17,
 
   founder: {
     name:  'Marcus Webb',
@@ -35,7 +35,7 @@ export const business = {
   },
 
   story: [
-    'Summit Ridge Landscaping was founded by Marcus Webb, a Colorado State University-trained ' +
+    'Blue Ridge Landscapes was founded by Marcus Webb, a UNESCO State University-trained ' +
     'horticulturist with a deep respect for the alpine environment. What started as a two-person ' +
     'operation in the foothills of Boulder has grown into one of the Front Range\'s most trusted landscape firms.',
 
@@ -63,8 +63,8 @@ export const business = {
   services: [
     {
       key:         'design',
-      title:       'Landscape Design',
-      description: 'Bespoke designs tailored to your terrain, lifestyle, and vision — delivered with precision 3D renderings before a single shovel breaks ground.',
+      title:       'Landscape Design & Master Planning',
+      description: 'Custom design consultations producing detailed plans tailored to your blocks topography, aspect, and soil.',
     },
     {
       key:         'hardscaping',
@@ -96,11 +96,11 @@ export const business = {
   // ── Testimonials ───────────────────────────────────────────
   testimonials: [
     {
-      name:     'Sarah & Tom Mitchell',
-      location: 'Boulder, CO',
-      project:  'Full backyard transformation',
+      name:     'Catherine M',
+      location: 'Leura, NSW',
+      project:  'Full garden transformation',
       stars:    5,
-      text:     "Summit Ridge completely reimagined our hillside backyard. The native plant design they created is not only stunning but virtually maintenance-free. We've received more compliments on our yard than anything else about our home. The craftsmanship on the stone terracing is truly museum-quality.",
+      text:     "Blue Ridge completely reimagined our half-acre block in Leura. The sandstone retaining wall alone is worth every cent — it looks like it's been there for a century.",
     },
     {
       name:     'James Rowland',
